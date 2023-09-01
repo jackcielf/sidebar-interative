@@ -19,7 +19,7 @@ const routes: Routes = [
     component: FormNumberItemsComponent,
   },
   {
-    path: 'form-name',
+    path: 'form-name/:number',
     component: FormNameItemsComponent,
   },
 ];

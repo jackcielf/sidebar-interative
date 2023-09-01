@@ -1,24 +1,8 @@
-.create-menu-box {
+.create-menu-container {
   background-color: var(--white);
 }
 
-.create-menu-box p {
+.create-menu-container label {
   font-weight: 600;
   font-size: 1.3em;
-  margin-bottom: 10px;
-}
-.create-menu-box button {
-  background-color: var(--blueDark);
-  border: 2px solid var(--blueDark);
-  padding: 7px 23px;
-  cursor: pointer;
-  border-radius: 10px;
-  color: var(--white);
-  font-weight: 600;
-}
-
-.create-menu-box button:hover {
-  transition: 0.3s ease-in-out;
-  color: var(--blueDark);
-  background-color: transparent;
 }

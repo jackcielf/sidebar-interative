@@ -1,1 +1,11 @@
-<p>form-name-items works!</p>
+<div class="form-switch-container">
+  <div class="grup-input">
+    <mat-select>
+      <mat-label>Escolha: </mat-label>
+      <mat-option *ngFor="let item of items" [value]="item.value">
+        <mat-icon>{{item.icon}}</mat-icon>
+        {{ item.viewValue }}
+      </mat-option>
+    </mat-select>
+  </div>
+</div>

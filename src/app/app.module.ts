@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { MaterialModule } from './material-module';
-import { AppRoutingModule } from './app-routing.module';
+
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { FormNumberItemsComponent } from './components/form-number-items/form-number-items.component';
 import { FormNameItemsComponent } from './components/form-name-items/form-name-items.component';
@@ -23,7 +26,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

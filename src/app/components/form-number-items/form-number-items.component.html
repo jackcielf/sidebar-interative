@@ -1,0 +1,14 @@
+<div class="number-items-container">
+  <label for="number">Quantos itens terá seu menu?</label>
+  <mat-form-field>
+    <input
+      id="number"
+      type="number"
+      placeholder="Número de itens"
+      matInput
+      [(ngModel)]="valueItems"
+    />
+  </mat-form-field>
+  <span *ngIf="fieldInvalid" class="alert">Valor inválido!</span>
+  <button (click)="fnNumberItems()" mat-raised-button>Próximo</button>
+</div>
