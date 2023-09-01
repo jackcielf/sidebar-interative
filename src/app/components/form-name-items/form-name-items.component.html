@@ -1,5 +1,5 @@
 <div class="form-switch-container">
-  <div class="grup-input">
+  <div class="grup-input-box" *ngFor="let e of exe">
     <mat-select>
       <mat-label>Escolha: </mat-label>
       <mat-option *ngFor="let item of items" [value]="item.value">

@@ -62,7 +62,8 @@ body {
 }
 
 .create-menu-container,
-.number-items-container {
+.number-items-container,
+.form-switch-container {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -72,8 +73,10 @@ body {
 }
 
 .create-menu-container label,
-.number-items-container label {
+.number-items-container>label {
   margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 .create-menu-container button, 
