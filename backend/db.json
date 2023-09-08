@@ -1,8 +1,9 @@
 {
-    "menu": [
-        {
-            "id": 1,
-            "nameItems": []
-        }
-    ] 
+  "menu": [
+    {
+      "id": 1,
+      "nameItems": ["ok", "okk", "okkk"],
+      "nameIcons": []
+    }
+  ]
 }

@@ -2,6 +2,9 @@
   <div class="container-width">
     <label for="1"> Pronto!</label>
     <span>Agora selecione quais serão os itens da sua barra</span>
+    <p class="valid" *ngIf="validation">
+      Selecione uma opção em todos os campos
+    </p>
     <div class="selects-box" #boxSelect>
       <!-- <mat-select>
             <mat-label>Escolha</mat-label>
@@ -12,43 +15,34 @@
           </mat-select> -->
       <mat-form-field>
         <mat-label>Select an option</mat-label>
-        <mat-select
-          disableRipple
-          class="select"
-          (valueChange)="changeV($event)"
-        >
+        <mat-select disableRipple class="select">
           <mat-option *ngFor="let item of items" value="{{ item.value }}">
             <mat-icon>{{ item.icon }}</mat-icon>
             {{ item.viewValue }}
           </mat-option>
         </mat-select>
       </mat-form-field>
+
       <mat-form-field>
         <mat-label>Select an option</mat-label>
-        <mat-select
-          disableRipple
-          class="select"
-          (valueChange)="changeV($event)"
-        >
+        <mat-select disableRipple class="select">
           <mat-option *ngFor="let item of items" value="{{ item.value }}">
             <mat-icon>{{ item.icon }}</mat-icon>
             {{ item.viewValue }}
           </mat-option>
         </mat-select>
       </mat-form-field>
+
       <mat-form-field>
         <mat-label>Select an option</mat-label>
-        <mat-select
-          disableRipple
-          class="select"
-          (valueChange)="changeV($event)"
-        >
+        <mat-select disableRipple class="select">
           <mat-option *ngFor="let item of items" value="{{ item.value }}">
             <mat-icon>{{ item.icon }}</mat-icon>
             {{ item.viewValue }}
           </mat-option>
         </mat-select>
       </mat-form-field>
+
       <button mat-raised-button (click)="saveSidenav()">Confirmar</button>
     </div>
   </div>

@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Select } from '../../Select';
+
 @Component({
   selector: 'app-form-name-items',
   templateUrl: './form-name-items.component.html',
@@ -58,63 +60,13 @@ export class FormNameItemsComponent implements OnInit {
   ];
 
   numberItems: number;
+  validation = false;
 
-  // @ViewChild('select') boxSelect: ElementRef;
-
-  // exe = [
-  //   { id: 1, exValue: '' },
-  //   { id: 2, exValue: '' },
-  //   { id: 3, exValue: '' },
-  //   { id: 4, exValue: '' },
-  //   { id: 5, exValue: '' },
-  //   { id: 6, exValue: '' },
-  // ];
-
-  // items = [
-  //   { icon: 'home', viewValue: 'Início' },
-  //   { icon: 'contacts', viewValue: 'Contatos' },
-  //   { icon: 'home', viewValue: 'Logar' },
-  //   { icon: 'home', viewValue: 'Cadastrar' },
-  //   { icon: 'account_circle', viewValue: 'Meu perfil' },
-  //   { icon: 'exit_to_app', viewValue: 'Sair da conta' },
-  //   { icon: 'settings', viewValue: 'Configurações' },
-  //   { icon: 'shopping_basket', viewValue: 'Shop' },
-  //   { icon: 'contact_support', viewValue: 'Suporte' },
-  //   { icon: 'person', viewValue: 'Usuário' },
-  //   {
-  //     icon: 'open_in_new',
-  //     viewValue: 'Redirecionar para...',
-  //   },
-  //   { icon: 'beenhere', viewValue: 'Salvo' },
-  //   { icon: 'error', viewValue: 'Sobre nós' },
-  //   { icon: 'mail', viewValue: 'Meu e-mail' },
-  //   { icon: 'sms', viewValue: 'Chat' },
-  //   { icon: 'create_new_folder', viewValue: 'Nova pasta' },
-  //   { icon: 'image', viewValue: 'Galeria' },
-  //   {
-  //     icon: 'add_photo_alternate',
-  //     viewValue: 'Adicionar imagem',
-  //   },
-  //   { icon: 'check', viewValue: 'Produtos' },
-  //   { icon: 'forum', viewValue: 'Fórum' },
-  //   { icon: 'thumb_down', viewValue: 'Marcados com gostei' },
-  //   { icon: 'thumb_up', viewValue: 'Marcados com não gostei' },
-  //   { icon: 'map', viewValue: 'Localização' },
-  //   {
-  //     icon: 'supervisor_account',
-  //     viewValue: 'Meus amigos',
-  //   },
-  //   { icon: 'local_atm', viewValue: 'Serviços' },
-  //   { icon: 'local_mall', viewValue: 'Comprar' },
-  //   { icon: 'payment', viewValue: 'Pagamento' },
-  //   { icon: 'search', viewValue: 'Pesquisar' },
-  //   {
-  //     icon: 'add_shopping_cart',
-  //     viewValue: 'Adicionar ao carrinho',
-  //   },
-  //   { icon: 'help', viewValue: 'Ajuda' },
-  //   { icon: 'brightness_6', viewValue: 'Brilho' },
-  // ];
+  navbarData: Select = {
+    slt1: '',
+    slt2: '',
+    slt3: '',
+  };
 
   constructor(private route: ActivatedRoute) {}
 
@@ -122,15 +74,18 @@ export class FormNameItemsComponent implements OnInit {
     this.numberItems = Number(this.route.snapshot.paramMap.get('number'));
   }
 
-  saveSidenav() {
-    while (this.numberItems > 0) {
-      let select = document.getElementById('1');
-      console.log(select.textContent);
-      this.numberItems--;
-    }
-  }
+  saveSidenav(): void {
+    // while (this.numberItems > 0) {
+    //   let select = document.getElementById('1');
+    //   console.log(select.textContent);
+    //   this.numberItems--;
+    // }
 
-  changeV(e: any) {
-    console.log(e);
+    this.navbarData.slt1 =
+      document.getElementsByClassName('select')[0].textContent;
+    this.navbarData.slt2 =
+      document.getElementsByClassName('select')[1].textContent;
+    this.navbarData.slt3 =
+      document.getElementsByClassName('select')[2].textContent;
   }
 }
