@@ -1,11 +1,55 @@
-<div class="form-switch-container">
-  <div class="grup-input-box" *ngFor="let e of exe">
-    <mat-select>
-      <mat-label>Escolha: </mat-label>
-      <mat-option *ngFor="let item of items" [value]="item.value">
-        <mat-icon>{{item.icon}}</mat-icon>
-        {{ item.viewValue }}
-      </mat-option>
-    </mat-select>
+<div class="container">
+  <div class="container-width">
+    <label for="1"> Pronto!</label>
+    <span>Agora selecione quais serão os itens da sua barra</span>
+    <div class="selects-box" #boxSelect>
+      <!-- <mat-select>
+            <mat-label>Escolha</mat-label>
+            <option *ngFor="let item of items">
+              <mat-icon>{{ item.icon }}</mat-icon>
+              {{ item.viewValue }}
+            </option>
+          </mat-select> -->
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select
+          disableRipple
+          class="select"
+          (valueChange)="changeV($event)"
+        >
+          <mat-option *ngFor="let item of items" value="{{ item.value }}">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            {{ item.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select
+          disableRipple
+          class="select"
+          (valueChange)="changeV($event)"
+        >
+          <mat-option *ngFor="let item of items" value="{{ item.value }}">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            {{ item.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select
+          disableRipple
+          class="select"
+          (valueChange)="changeV($event)"
+        >
+          <mat-option *ngFor="let item of items" value="{{ item.value }}">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            {{ item.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="saveSidenav()">Confirmar</button>
+    </div>
   </div>
 </div>

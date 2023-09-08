@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,19 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./form-name-items.component.scss'],
 })
 export class FormNameItemsComponent implements OnInit {
-  numberItems: number;
-
-  //   numberSelect: [`${numberItems}`]
-
-  exe = [
-    { exValue: '' },
-    { exValue: '' },
-    { exValue: '' },
-    { exValue: '' },
-    { exValue: '' },
-    { exValue: '' },
-  ]
-
   items = [
     { icon: 'home', value: 'home', viewValue: 'Início' },
     { icon: 'contacts', value: 'contacts', viewValue: 'Contatos' },
@@ -70,11 +57,80 @@ export class FormNameItemsComponent implements OnInit {
     { icon: 'brightness_6', value: 'brightness', viewValue: 'Brilho' },
   ];
 
+  numberItems: number;
+
+  // @ViewChild('select') boxSelect: ElementRef;
+
+  // exe = [
+  //   { id: 1, exValue: '' },
+  //   { id: 2, exValue: '' },
+  //   { id: 3, exValue: '' },
+  //   { id: 4, exValue: '' },
+  //   { id: 5, exValue: '' },
+  //   { id: 6, exValue: '' },
+  // ];
+
+  // items = [
+  //   { icon: 'home', viewValue: 'Início' },
+  //   { icon: 'contacts', viewValue: 'Contatos' },
+  //   { icon: 'home', viewValue: 'Logar' },
+  //   { icon: 'home', viewValue: 'Cadastrar' },
+  //   { icon: 'account_circle', viewValue: 'Meu perfil' },
+  //   { icon: 'exit_to_app', viewValue: 'Sair da conta' },
+  //   { icon: 'settings', viewValue: 'Configurações' },
+  //   { icon: 'shopping_basket', viewValue: 'Shop' },
+  //   { icon: 'contact_support', viewValue: 'Suporte' },
+  //   { icon: 'person', viewValue: 'Usuário' },
+  //   {
+  //     icon: 'open_in_new',
+  //     viewValue: 'Redirecionar para...',
+  //   },
+  //   { icon: 'beenhere', viewValue: 'Salvo' },
+  //   { icon: 'error', viewValue: 'Sobre nós' },
+  //   { icon: 'mail', viewValue: 'Meu e-mail' },
+  //   { icon: 'sms', viewValue: 'Chat' },
+  //   { icon: 'create_new_folder', viewValue: 'Nova pasta' },
+  //   { icon: 'image', viewValue: 'Galeria' },
+  //   {
+  //     icon: 'add_photo_alternate',
+  //     viewValue: 'Adicionar imagem',
+  //   },
+  //   { icon: 'check', viewValue: 'Produtos' },
+  //   { icon: 'forum', viewValue: 'Fórum' },
+  //   { icon: 'thumb_down', viewValue: 'Marcados com gostei' },
+  //   { icon: 'thumb_up', viewValue: 'Marcados com não gostei' },
+  //   { icon: 'map', viewValue: 'Localização' },
+  //   {
+  //     icon: 'supervisor_account',
+  //     viewValue: 'Meus amigos',
+  //   },
+  //   { icon: 'local_atm', viewValue: 'Serviços' },
+  //   { icon: 'local_mall', viewValue: 'Comprar' },
+  //   { icon: 'payment', viewValue: 'Pagamento' },
+  //   { icon: 'search', viewValue: 'Pesquisar' },
+  //   {
+  //     icon: 'add_shopping_cart',
+  //     viewValue: 'Adicionar ao carrinho',
+  //   },
+  //   { icon: 'help', viewValue: 'Ajuda' },
+  //   { icon: 'brightness_6', viewValue: 'Brilho' },
+  // ];
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.numberItems = Number(this.route.snapshot.paramMap.get('number'));
   }
 
-  // getParam() {}
+  saveSidenav() {
+    while (this.numberItems > 0) {
+      let select = document.getElementById('1');
+      console.log(select.textContent);
+      this.numberItems--;
+    }
+  }
+
+  changeV(e: any) {
+    console.log(e);
+  }
 }

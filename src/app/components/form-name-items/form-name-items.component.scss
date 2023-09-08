@@ -1,12 +1,37 @@
-.form-switch-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2em;
+.container {
+  display: grid;
+  place-items: center;
+  gap: 2em;
 }
 
 .grup-input-box {
-    width: 300px;
-    border: 1px solid red;
+  display: grid;
+  place-items: center;
+}
+
+.container-width label {
+  font-size: 4em;
+  font-weight: 800;
+}
+.container-width label span {
+  display: block;
+  font-size: 0.3em;
+  font-weight: 600;
+  margin-top: 1.6em;
+}
+.container-width {
+  width: 40vw;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.selects-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
 }
