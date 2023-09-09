@@ -1,4 +1,4 @@
-.mat-nav-list {
+.nav-list {
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -65,5 +65,27 @@
       color: var(--white);
       font-weight: 600;
     }
+  }
+
+  .logo {
+    color: var(--blueForce);
+    margin-bottom: 1em;
+    margin-left: -10px;
+
+    i,
+    span {
+      color: var(--blueForce);
+      font-size: 2em;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 1.1em;
+      color: var(--blueShadow);
+    }
+  }
+
+  .logo:hover {
+    background-color: transparent;
   }
 }

@@ -2,8 +2,18 @@
   "menu": [
     {
       "id": 1,
-      "nameItems": ["ok", "okk", "okkk"],
-      "nameIcons": []
+      "nameItem1": "início",
+      "nameIcons": "home"
+    },
+    {
+      "id": 2,
+      "nameItem1": "contatos",
+      "nameIcons": "contacts"
+    },
+    {
+      "id": 3,
+      "nameItem1": "meu perfil",
+      "nameIcons": "account_circle"
     }
   ]
 }
