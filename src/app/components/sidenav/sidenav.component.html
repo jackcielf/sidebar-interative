@@ -6,9 +6,13 @@
     fixedInViewport="true"
     fixedTopGap="0"
   >
-    <mat-nav-list class="nav-list">
+    <mat-nav-list
+      class="nav-list"
+      [ngClass]="darkmode ? 'activedarkmode' : ''"
+      [ngClass]="openSideBar ? 'close_sidebar' : ''"
+    >
       <div>
-        <a class="logo" mat-list-item>
+        <a class="logo" mat-list-item (click)="fnCloseOpenSideBar()">
           <i class="material-icons">reorder</i>
           <span>Logo</span>
         </a>
@@ -57,14 +61,17 @@
       <div class="itens-bottom">
         <div class="mode">
           <div>
-            <i class="material-icons">storefront</i>
-            <span>Dark Mode</span>
+            <i class="material-icons">brightness_2</i>
+            <span>{{ this.lightDarkMode }} Mode</span>
           </div>
-          <input type="radio" />
+          <input type="checkbox" id="chk" (click)="fnDarkMode()" />
+          <label for="chk" class="switch">
+            <span class="slider"></span>
+          </label>
         </div>
         <div class="logout">
           <div>
-            <i class="material-icons">storefront</i>
+            <i class="material-icons">meeting_room</i>
             <span>Logout</span>
           </div>
         </div>

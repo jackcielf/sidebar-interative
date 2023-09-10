@@ -57,6 +57,8 @@ export class FormNameItemsComponent implements OnInit {
     },
     { icon: 'help', value: 'help', viewValue: 'Ajuda' },
     { icon: 'brightness_6', value: 'brightness', viewValue: 'Brilho' },
+    { icon: 'chat', value: 'comments', viewValue: 'Comentários' },
+    { icon: 'brightness_3', value: 'darkmode', viewValue: 'Modo escuro' },
   ];
 
   numberItems: number;
